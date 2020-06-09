@@ -1,12 +1,4 @@
-<style>
-.blue {
-  color: #7E6D7E;
-}
-</style>
-
-
-
-# <span class="blue">**IceCream** <span class="blue">
+# **IceCream** 
 
 
 ### :icecream: app使用手冊
