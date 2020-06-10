@@ -8,6 +8,7 @@
     android:background="#C6B4D9">
 
     <com.example.ice.Views.ChildView
+        android:id="@+id/childview_id"
         android:layout_width="410dp"
         android:layout_height="571dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,6 +26,7 @@
         android:gravity="center"
         android:text="@string/finish"
         android:textColor="#E8EAE1"
+        android:onClick="angleIncrease"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

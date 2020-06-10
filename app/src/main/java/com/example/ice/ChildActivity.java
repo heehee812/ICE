@@ -25,9 +25,14 @@ public class ChildActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        final float[] angle = {0};
+        final float numberOfMission=5;
+        final ChildView childview;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child);
-        ChildView childView= new ChildView(this);
+        childview= findViewById(R.id.childview_id);
 
         //button
         final Boolean[] buttonFinishClicked = {false};
@@ -39,16 +44,26 @@ public class ChildActivity extends AppCompatActivity {
                 if(buttonFinishClicked[0])
                 {
                     buttonFinish.setBackgroundColor(Color.rgb(151, 68, 68));
+                    if(childview!=null) {
+                        if(angle[0] <360)
+                            angle[0] += (360 / numberOfMission);
+                        else {
+                            angle[0] =0;
+                        }
+
+                        childview.angleIncrease(angle[0]);
+                        childview.invalidate();
+                    }
                 }
                 else
                 {
                     buttonFinish.setBackgroundColor(Color.rgb(181, 131, 141));
                 }
+                buttonFinishClicked[0]=!buttonFinishClicked[0];
             }
 
         });
 
     }
-
 
 }
