@@ -15,4 +15,5 @@
     <string name="success">success!</string>
     <string name="finish">finish</string>
     <string name="mission_success">mission success!</string>
+    <string name="log_out">log out</string>
 </resources>

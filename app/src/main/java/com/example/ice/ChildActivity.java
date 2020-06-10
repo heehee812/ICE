@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -14,6 +15,7 @@ import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -62,6 +64,17 @@ public class ChildActivity extends AppCompatActivity {
                 buttonFinishClicked[0]=!buttonFinishClicked[0];
             }
 
+        });
+
+        final Button button_back =  findViewById(R.id.button_logout);
+        button_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_back.setBackgroundColor(Color.rgb(209, 160, 226));
+                Log.d("button click", "yes");
+                Intent LogoutActivityIntent = new Intent(ChildActivity.this, MainActivity.class);
+                startActivity(LogoutActivityIntent);
+            }
         });
 
     }
