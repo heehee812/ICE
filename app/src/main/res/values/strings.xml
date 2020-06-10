@@ -13,4 +13,5 @@
     <string name="parent">parent</string>
     <string name="children">children</string>
     <string name="success">success!</string>
+    <string name="finish">finish</string>
 </resources>

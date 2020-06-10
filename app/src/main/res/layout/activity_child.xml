@@ -4,6 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChildActivity">
+    tools:context=".ChildActivity"
+    android:background="#C6B4D9">
+
+    <com.example.ice.Views.ChildView
+        android:layout_width="410dp"
+        android:layout_height="571dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button_finish"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="#B5838D"
+        android:gravity="center"
+        android:text="@string/finish"
+        android:textColor="#E8EAE1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155"
+        tools:ignore="MissingConstraints,OnClick" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
