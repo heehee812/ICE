@@ -24,7 +24,7 @@
         android:layout_height="40dp"
         android:background="#B5838D"
         android:gravity="center"
-        android:text="@string/finish"
+        android:text="@string/mission_success"
         android:textColor="#E8EAE1"
         android:onClick="angleIncrease"
         app:layout_constraintBottom_toBottomOf="parent"

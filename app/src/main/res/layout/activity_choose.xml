@@ -4,8 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Choose"
-    android:background="#C6B4D9">
+    tools:context=".Choose">
+
+    <com.example.ice.Views.ChooseView
+        android:layout_width="404dp"
+        android:layout_height="722dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
 
     <Button
         android:id="@+id/button_parent"
@@ -14,7 +23,8 @@
         android:background="@android:color/transparent"
         android:gravity="center"
         android:text="@string/parent"
-        android:textColor="#E8EAE1"
+        android:textColor="#DAACF6"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -30,13 +40,14 @@
         android:background="@android:color/transparent"
         android:gravity="center"
         android:text="@string/children"
-        android:textColor="#E8EAE1"
+        android:textColor="#DAACF6"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76"
+        app:layout_constraintVertical_bias="0.709"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

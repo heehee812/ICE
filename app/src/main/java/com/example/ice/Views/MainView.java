@@ -54,23 +54,18 @@ public class MainView extends View {
         Paint paint;
         paint= new Paint();
 
-        int x=2*getWidth()/4, y=0;
-        int imgXicecream=300, imgYicecream=350;
-        int imgXtitle=700, imgYtitle=300;
-
-        canvas.drawColor(Color.rgb(198, 180, 217));
+        int x=getWidth()/3, y=getHeight()/6;
+        int imgXicecream=700, imgYicecream=800;
 
         //background
+        @SuppressLint("DrawAllocation") Bitmap bg= BitmapFactory.decodeResource(getResources(), R.drawable.bg);
+        bg = Bitmap.createScaledBitmap(bg, getWidth(), getHeight()-200, true);
+        canvas.drawBitmap(bg,0, 0, paint);
 
         //icon
         @SuppressLint("DrawAllocation") Bitmap ice_cream_icon= BitmapFactory.decodeResource(getResources(), R.drawable.ice_cream_icon);
         ice_cream_icon = Bitmap.createScaledBitmap(ice_cream_icon, imgXicecream, imgYicecream, true);
-        canvas.drawBitmap(ice_cream_icon,x+130, y, paint);
-
-        //title
-        @SuppressLint("DrawAllocation") Bitmap title= BitmapFactory.decodeResource(getResources(), R.drawable.title);
-        title = Bitmap.createScaledBitmap(title, imgXtitle, imgYtitle, true);
-        canvas.drawBitmap(title,x-300 , y+250, paint);
+        canvas.drawBitmap(ice_cream_icon,x, y, paint);
 
     }
 

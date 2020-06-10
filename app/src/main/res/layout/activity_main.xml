@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#C6B4D9">
+    tools:context=".MainActivity">
 
     <com.example.ice.Views.MainView
-        android:layout_width="408dp"
-        android:layout_height="136dp"
+        android:layout_width="404dp"
+        android:layout_height="722dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintVertical_bias="0.495" />
 
     <EditText
             android:id="@+id/edit_text_account"
@@ -53,37 +52,39 @@
             app:layout_constraintVertical_bias="0.567"
             tools:ignore="LabelFor,MissingConstraints" />
 
-        <Button
-            android:id="@+id/button_sign_up"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:background="@android:color/transparent"
-            android:gravity="center"
-            android:text="@string/sign_up"
-            android:textColor="#E8EAE1"
-            android:onClick="SignUpOnClick"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.54"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.862"
-            tools:ignore="MissingConstraints,OnClick" />
+    <Button
+        android:id="@+id/button_sign_up"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:onClick="SignUpOnClick"
+        android:text="@string/sign_up"
+        android:textColor="#E8EAE1"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.816"
+        tools:ignore="MissingConstraints,OnClick" />
 
-        <Button
-            android:id="@+id/button_sign_in"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:background="@android:color/transparent"
-            android:gravity="center"
-            android:text="@string/sign_in"
-            android:textColor="#E8EAE1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.54"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.762"
-            tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/sign_in"
+        android:textColor="#E8EAE1"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

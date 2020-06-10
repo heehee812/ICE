@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp"
-    android:background="#C6B4D9">
+    tools:context=".SignUp">
+
+    <com.example.ice.Views.SignUpView
+        android:layout_width="404dp"
+        android:layout_height="722dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
+
 
     <EditText
         android:id="@+id/edit_text_account"
@@ -67,6 +77,7 @@
         android:background="@android:color/transparent"
         android:gravity="center"
         android:text="@string/next"
+        android:textSize="20dp"
         android:textColor="#E8EAE1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,6 +94,7 @@
         android:background="@android:color/transparent"
         android:gravity="center"
         android:text="@string/back"
+        android:textSize="20dp"
         android:textColor="#E8EAE1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -13,9 +13,14 @@ import android.graphics.RectF;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.ice.Views.ChildView;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    Boolean clicked= false;
 
     public static class CustomView extends View {
         Paint paint;
@@ -39,16 +44,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        setContentView(new MainActivity.CustomView(this));
 
-        Button button_sign_in = findViewById(R.id.button_sign_in);
-        Button button_sign_up = findViewById(R.id.button_sign_up);
+        final Button button_sign_in = findViewById(R.id.button_sign_in);
+        final Button button_sign_up = findViewById(R.id.button_sign_up);
         button_sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(MainActivity.this,"success!", Toast.LENGTH_SHORT).show();
+                button_sign_up.setBackgroundColor(Color.rgb(209, 160, 226));
                 Intent SignUpActivityIntent = new Intent(MainActivity.this,SignUp.class);
                 startActivity(SignUpActivityIntent);
+            }
+        });
+
+        button_sign_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_sign_in.setBackgroundColor(Color.rgb(209, 160, 226));
+                Toast.makeText(MainActivity.this,"success!", Toast.LENGTH_SHORT).show();
+                Intent ChildActivityIntent = new Intent(MainActivity.this, ChildActivity.class);
+                startActivity(ChildActivityIntent);
             }
         });
 

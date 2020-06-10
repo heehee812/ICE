@@ -83,10 +83,6 @@ public class ChildView extends View {
         canvas.drawBitmap(monster2, x-imgXmonster/2 , y-2*imgYmonster/3, paint);
         canvas.drawBitmap(monster, x-imgXmonster/2 , y-2*imgYmonster/3, paint);
 
-        //circle
-        paint.setColor(Color.rgb(109, 104, 117));
-        canvas.drawCircle(x, y, radius, paint);
-
         //arc
         Log.d("angle", String.valueOf(angle));
         paint.setStyle(Paint.Style.FILL);
@@ -96,12 +92,13 @@ public class ChildView extends View {
 
         //arc2
         paint.setStyle(Paint.Style.STROKE);
-        paint.setColor(Color.rgb(202, 194, 120));
+        paint.setStrokeWidth(6);
+        paint.setColor(Color.rgb(105, 118, 155));
         canvas.drawArc(oval,0, angle, true, paint);
 
 
         //circle2
-        paint.setColor(Color.rgb(85, 92, 106));
+        paint.setColor(Color.rgb(105, 118, 155));
         paint.setStrokeWidth(6);
         paint.setStyle(Paint.Style.STROKE);
         canvas.drawCircle(x, y, radius, paint);

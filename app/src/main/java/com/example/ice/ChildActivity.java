@@ -27,7 +27,7 @@ public class ChildActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         final float[] angle = {0};
-        final float numberOfMission=5;
+        final float numberOfMission=10;
         final ChildView childview;
 
         super.onCreate(savedInstanceState);
