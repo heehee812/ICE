@@ -7,8 +7,6 @@
     tools:context=".MainActivity"
     android:background="#C6B4D9">
 
-
-
     <EditText
             android:id="@+id/edit_text_account"
             android:layout_width="164dp"
@@ -53,13 +51,14 @@
             android:gravity="center"
             android:text="@string/sign_up"
             android:textColor="#E8EAE1"
+            android:onClick="SignUpOnClick"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.54"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.862"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,OnClick" />
 
         <Button
             android:id="@+id/button_sign_in"
@@ -75,7 +74,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.762"
-            tools:ignore="MissingConstraints"
-            android:onClick="signIn"/>
+            tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

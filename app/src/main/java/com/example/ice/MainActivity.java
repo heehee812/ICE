@@ -1,24 +1,48 @@
 package com.example.ice;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+    public static class CustomView extends View {
+        Paint paint;
+        public CustomView(Context context){
+            super(context);
+            paint= new Paint();
+        }
+
+        @SuppressLint("DrawAllocation")
+        protected void onDraw(Canvas canvas){
+
+//            monster
+            int x=getWidth() / 2;
+            @SuppressLint("DrawAllocation") Bitmap icecream_logo= BitmapFactory.decodeResource(getResources(), R.drawable.ice_cream_icon);
+            icecream_logo = Bitmap.createScaledBitmap(icecream_logo, 500, 500, true);
+            canvas.drawBitmap(icecream_logo, x , 0, paint);
+
+        }
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        setContentView(new MainActivity.CustomView(this));
 
-        Button button_sign_in = (Button) findViewById(R.id.button_sign_in);
-        Button button_sign_up = (Button) findViewById(R.id.button_sign_up);
+        Button button_sign_in = findViewById(R.id.button_sign_in);
+        Button button_sign_up = findViewById(R.id.button_sign_up);
         button_sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

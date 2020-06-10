@@ -7,20 +7,6 @@
     tools:context=".Choose"
     android:background="#C6B4D9">
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="189dp"
-        android:layout_height="218dp"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/icon_parent_children"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.545"
-        tools:ignore="MissingConstraints" />
-
     <Button
         android:id="@+id/button_parent"
         android:layout_width="105dp"

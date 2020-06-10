@@ -12,4 +12,5 @@
     <string name="back">back</string>
     <string name="parent">parent</string>
     <string name="children">children</string>
+    <string name="success">success!</string>
 </resources>
