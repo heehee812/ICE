@@ -50,7 +50,7 @@ public class ChildActivity extends AppCompatActivity {
                         if(angle[0] <360)
                             angle[0] += (360 / numberOfMission);
                         else {
-                            angle[0] =0;
+                            angle[0] =360 / numberOfMission;
                         }
 
                         childview.angleIncrease(angle[0]);

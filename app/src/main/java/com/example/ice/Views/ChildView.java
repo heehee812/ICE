@@ -86,15 +86,15 @@ public class ChildView extends View {
         //arc
         Log.d("angle", String.valueOf(angle));
         paint.setStyle(Paint.Style.FILL);
-        paint.setColor(Color.rgb(202, 194, 120));
+        paint.setColor(Color.rgb(225, 225, 195));
         RectF oval = new RectF( x-radius, y-radius, x+radius, y+radius);
-        canvas.drawArc(oval,0, angle, true, paint);
+        canvas.drawArc(oval,270, angle, true, paint);
 
         //arc2
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(6);
         paint.setColor(Color.rgb(105, 118, 155));
-        canvas.drawArc(oval,0, angle, true, paint);
+        canvas.drawArc(oval,270, angle, true, paint);
 
 
         //circle2

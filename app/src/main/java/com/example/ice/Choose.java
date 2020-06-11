@@ -23,7 +23,7 @@ public class Choose extends AppCompatActivity {
         button_child.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                button_child.setBackgroundColor(Color.rgb(209, 160, 226));
+                button_child.setBackgroundColor(Color.rgb(211, 208, 216));
                 Log.d("button child", "true");
                 Toast.makeText(Choose.this,"finish", Toast.LENGTH_SHORT).show();
                 Intent ChooseIntent = new Intent(Choose.this, ChildActivity.class);

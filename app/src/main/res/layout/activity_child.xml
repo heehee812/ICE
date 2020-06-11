@@ -22,7 +22,7 @@
         android:id="@+id/button_finish"
         android:layout_width="151dp"
         android:layout_height="55dp"
-        android:background="#B5838D"
+        android:background="#D1A0E2"
         android:gravity="center"
         android:onClick="angleIncrease"
         android:text="@string/mission_success"
