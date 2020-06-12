@@ -87,7 +87,7 @@ low fi to medium fi design
 
 ![](https://i.imgur.com/CbGTvRp.png)
 
-#### :label: 4. **app雛形模擬** -> [link](https://xd.adobe.com/view/dd0b9042-fbd3-44f7-76ec-2cc77cd0e6f4-ab3a/screen/6d14a1e0-19aa-43e3-bba1-aa55cb4d682f/New-Wish?fullscreen)
+#### :label: 4. **app雛形模擬** -> [link](https://xd.adobe.com/view/217e07e0-747e-49b5-6e48-b7fe4b6154df-574f/)
 :warning: **使用指南尚未完成，在觀看上造成不便請見諒，並耐心稍等**
 
 ![](https://i.imgur.com/lQNgDwD.png)
