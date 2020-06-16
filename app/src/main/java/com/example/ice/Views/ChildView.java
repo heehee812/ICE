@@ -16,12 +16,10 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-import com.example.ice.ChildActivity;
+import com.example.ice.MainChildActivity;
 import com.example.ice.R;
 
 public class ChildView extends View {
-
-    private float numberOfMission=5;
     private float angle=0;
     private Paint paint= new Paint();
 

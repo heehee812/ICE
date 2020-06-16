@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 button_sign_in.setBackgroundColor(Color.rgb(209, 160, 226));
                 Toast.makeText(MainActivity.this,"success!", Toast.LENGTH_SHORT).show();
-                Intent ChildActivityIntent = new Intent(MainActivity.this, ChildActivity.class);
+                Intent ChildActivityIntent = new Intent(MainActivity.this, MainChildActivity.class);
                 startActivity(ChildActivityIntent);
             }
         });

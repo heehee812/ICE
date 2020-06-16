@@ -14,7 +14,6 @@
             android:label="@string/title_activity_main_child"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Choose" />
-        <activity android:name=".ChildActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -1,14 +1,19 @@
 package com.example.ice;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.ice.Views.ChildView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -29,6 +34,12 @@ public class MainChildActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+
+        final float[] angle = {0};
+        final float numberOfMission=10;
+        final ChildView childview;
+        childview= findViewById(R.id.childview_idd);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +62,7 @@ public class MainChildActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainChildActivity.this, "Button1 Click!", Toast.LENGTH_SHORT).show();
                 onBackPressed();
-                Intent LogoutActivityIntent = new Intent(MainChildActivity.this,ChildActivity.class);
+                Intent LogoutActivityIntent = new Intent(MainChildActivity.this,MainActivity.class);
                 startActivity(LogoutActivityIntent);
             }
         });
@@ -60,6 +71,57 @@ public class MainChildActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainChildActivity.this, "Button2 Click!", Toast.LENGTH_SHORT).show();
                 onBackPressed();
+            }
+        });
+
+        //button
+        final Boolean[] buttonFinishClicked = {false};
+        final Button buttonFinish= findViewById(R.id.button_fin);
+        if(childview==null)
+            Log.d("button null null", "click");
+        buttonFinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Log.d("button", "click");
+                buttonFinishClicked[0] =!buttonFinishClicked[0];
+                if(buttonFinishClicked[0])
+                {
+                    Log.d("button in in", "click");
+                    buttonFinish.setBackgroundColor(Color.rgb(151, 68, 68));
+                    if(childview!=null) {
+                        if(angle[0] <360) {
+                            angle[0] += (360 / numberOfMission);
+                        }
+                        else {
+                            angle[0] =360 / numberOfMission;
+                        }
+
+                        childview.angleIncrease(angle[0]);
+                        Log.d("button in", "click");
+                        childview.invalidate();
+                    }
+                    else{
+                        Log.d("button null", "click");
+                    }
+
+                }
+                else
+                {
+                    buttonFinish.setBackgroundColor(Color.rgb(181, 131, 141));
+                }
+                buttonFinishClicked[0]=!buttonFinishClicked[0];
+            }
+
+        });
+
+        final Button button_back =  findViewById(R.id.button_logout);
+        button_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_back.setBackgroundColor(Color.rgb(209, 160, 226));
+                Log.d("button click", "yes");
+                Intent LogoutActivityIntent = new Intent(MainChildActivity.this, MainActivity.class);
+                startActivity(LogoutActivityIntent);
             }
         });
     }
