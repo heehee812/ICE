@@ -36,4 +36,5 @@
     <string name="home">Home</string>
     <string name="mission">My mission</string>
     <string name="joe">Joe</string>
+    <string name="title_activity_wish">WishActivity</string>
 </resources>

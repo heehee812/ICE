@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shape="oval"
+    tools:ignore="ExtraText">
+    <size
+        android:width="40dp"
+        android:height="40dp" />
+
+    <gradient
+        android:startColor="#C2C845"
+        android:gradientRadius="80%p"
+        android:type="radial"
+        android:centerX="0.5"
+        android:centerY="0.5"/>  
+
+</shape>
