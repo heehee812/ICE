@@ -72,7 +72,7 @@ public class ChildActivity extends AppCompatActivity {
             public void onClick(View v) {
                 button_back.setBackgroundColor(Color.rgb(209, 160, 226));
                 Log.d("button click", "yes");
-                Intent LogoutActivityIntent = new Intent(ChildActivity.this, MainActivity.class);
+                Intent LogoutActivityIntent = new Intent(ChildActivity.this, MainChildActivity.class);
                 startActivity(LogoutActivityIntent);
             }
         });

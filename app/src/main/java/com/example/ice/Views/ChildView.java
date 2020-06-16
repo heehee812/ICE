@@ -77,11 +77,8 @@ public class ChildView extends View {
 
         //monster
         @SuppressLint("DrawAllocation") Bitmap monster2= BitmapFactory.decodeResource(getResources(), R.drawable.monster2);
-        @SuppressLint("DrawAllocation") Bitmap monster= BitmapFactory.decodeResource(getResources(), R.drawable.monster);
         monster2 = Bitmap.createScaledBitmap(monster2, imgXmonster, imgYmonster, true);
-        monster = Bitmap.createScaledBitmap(monster, imgXmonster, imgYmonster, true);
         canvas.drawBitmap(monster2, x-imgXmonster/2 , y-2*imgYmonster/3, paint);
-        canvas.drawBitmap(monster, x-imgXmonster/2 , y-2*imgYmonster/3, paint);
 
         //arc
         Log.d("angle", String.valueOf(angle));
