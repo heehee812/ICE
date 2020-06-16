@@ -8,11 +8,6 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include
-        layout="@layout/app_bar_main_child"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,23 +42,10 @@
             app:layout_constraintVertical_bias="0.155"
             tools:ignore="MissingConstraints,OnClick" />
 
-        <Button
-            android:id="@+id/button_logout"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:background="@android:color/transparent"
-            android:gravity="center"
-            android:text="@string/log_out"
-            android:textColor="#E8EAE1"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.95"
-            tools:ignore="MissingConstraints,OnClick" />
-
+        <include
+            layout="@layout/app_bar_main_child"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -57,24 +57,7 @@ public class MainChildActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
 
-        findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainChildActivity.this, "Button1 Click!", Toast.LENGTH_SHORT).show();
-                onBackPressed();
-                Intent LogoutActivityIntent = new Intent(MainChildActivity.this,MainActivity.class);
-                startActivity(LogoutActivityIntent);
-            }
-        });
-        findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainChildActivity.this, "Button2 Click!", Toast.LENGTH_SHORT).show();
-                onBackPressed();
-            }
-        });
-
-        //button
+        //button mission
         final Boolean[] buttonFinishClicked = {false};
         final Button buttonFinish= findViewById(R.id.button_fin);
         if(childview==null)
@@ -114,12 +97,14 @@ public class MainChildActivity extends AppCompatActivity {
 
         });
 
-        final Button button_back =  findViewById(R.id.button_logout);
-        button_back.setOnClickListener(new View.OnClickListener() {
+        //button logout
+        final Button button_logout =  findViewById(R.id.button_logout);
+        button_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                button_back.setBackgroundColor(Color.rgb(209, 160, 226));
+                button_logout.setBackgroundColor(Color.rgb(204, 233, 232));
                 Log.d("button click", "yes");
+                Toast.makeText(MainChildActivity.this, "log out!", Toast.LENGTH_SHORT).show();
                 Intent LogoutActivityIntent = new Intent(MainChildActivity.this, MainActivity.class);
                 startActivity(LogoutActivityIntent);
             }

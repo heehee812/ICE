@@ -31,4 +31,9 @@
     <string name="home_second">Home Second</string>
     <string name="todo">TODO</string>
     <string name="title_activity_main_child">MainChildActivity</string>
+    <string name="my_wish">My wish</string>
+    <string name="my_collection">My collection</string>
+    <string name="home">Home</string>
+    <string name="mission">My mission</string>
+    <string name="joe">Joe</string>
 </resources>
