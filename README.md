@@ -1,4 +1,12 @@
-# **IceCream** 
+<style>
+.blue {
+  color: #7E6D7E;
+}
+</style>
+
+
+
+# <span class="blue">**IceCream** <span class="blue">
 
 
 ### :icecream: app使用手冊
@@ -93,10 +101,13 @@ low fi to medium fi design
 ![](https://i.imgur.com/lQNgDwD.png)
 
 #### :label: 5. **high fi implement**
-利用 android studio 開發平台開發中，預計6/12更新進度 Loading...
+利用 android studio 開發平台開發中，持續更新進度 Loading...
 
-
-![](https://i.imgur.com/hXUpfJh.png)
+![](https://i.imgur.com/JCl6uSx.png)
+![](https://i.imgur.com/U6uyekQ.png)
+![](https://i.imgur.com/ssh51q3.png)
+![](https://i.imgur.com/BDmjzLF.png)
+![](https://i.imgur.com/gxqjnV0.png)
 
 
 ### :icecream: **團隊介紹**
