@@ -53,10 +53,12 @@ public class WishView extends View{
 
         Paint paint;
         paint= new Paint();
+        int imgXwishpool= getWidth();
+        int imgYwishpool= getHeight();
 
         //wish pool
         @SuppressLint("DrawAllocation") Bitmap wish_pool= BitmapFactory.decodeResource(getResources(), R.drawable.wish_pool);
-        wish_pool = Bitmap.createScaledBitmap(wish_pool, getWidth(), getHeight()-200, true);
+        wish_pool = Bitmap.createScaledBitmap(wish_pool, imgXwishpool, imgYwishpool, true);
         canvas.drawBitmap(wish_pool,0, 0, paint);
 
     }

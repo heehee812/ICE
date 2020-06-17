@@ -39,4 +39,6 @@
     <string name="title_activity_wish">WishActivity</string>
     <string name="check">Check !</string>
     <string name="wait">Wait</string>
+    <string name="cancel">cancel</string>
+    <string name="done">Done</string>
 </resources>

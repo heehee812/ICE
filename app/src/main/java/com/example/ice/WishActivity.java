@@ -69,13 +69,36 @@ public class WishActivity extends AppCompatActivity {
         });
 
         //button coin
+        final Button button_wish_done= findViewById(R.id.button_wish_done);
+        final Button button_wish_cancel= findViewById(R.id.button_wish_cancel);
         final EditText wish_papper= findViewById(R.id.edit_wish_papper);
         final Button button_coin = findViewById(R.id.button_coin);
         button_coin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 wish_papper.setVisibility(View.VISIBLE);
+                button_wish_done.setVisibility(View.VISIBLE);
+                button_wish_cancel.setVisibility(View.VISIBLE);
+            }
+        });
 
+        //button wish papper done
+        button_wish_done.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                wish_papper.setVisibility(View.INVISIBLE);
+                button_wish_done.setVisibility(View.INVISIBLE);
+                button_wish_cancel.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        //button wish papper cancel
+        button_wish_cancel.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                wish_papper.setVisibility(View.INVISIBLE);
+                button_wish_done.setVisibility(View.INVISIBLE);
+                button_wish_cancel.setVisibility(View.INVISIBLE);
             }
         });
 
