@@ -90,16 +90,30 @@ public class MissionActivity extends AppCompatActivity {
                     Log.d("click new", "click");
                 if(!newClicked[0]) {
                     text_rule_walk.setVisibility(View.VISIBLE);
-                    button_new_mission.setVisibility(View.INVISIBLE);
                     button_new_mission2.setVisibility(View.VISIBLE);
                     newClicked[0] = true;
                 }
                 else{
-                    text_rule_walk.setVisibility(View.INVISIBLE);
-                    button_new_mission.setVisibility(View.INVISIBLE);
-                    button_new_mission2.setVisibility(View.VISIBLE);
                     newClicked[0] = false;
+                    text_rule_walk.setVisibility(View.INVISIBLE);
                 }
+                button_new_mission2.setVisibility(View.VISIBLE);
+            }
+        });
+
+        button_new_mission2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(!newClicked[0]) {
+                    text_rule_walk.setVisibility(View.VISIBLE);
+                    button_new_mission2.setVisibility(View.VISIBLE);
+                    newClicked[0] = true;
+                }
+                else{
+                    newClicked[0] = false;
+                    text_rule_walk.setVisibility(View.INVISIBLE);
+                }
+                button_new_mission2.setVisibility(View.VISIBLE);
             }
         });
 
