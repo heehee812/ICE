@@ -33,20 +33,12 @@ public class MainChildActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_child);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
 
         final float[] angle = {0};
         final float numberOfMission=30;
         final ChildView childview;
         childview= findViewById(R.id.childview_idd);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

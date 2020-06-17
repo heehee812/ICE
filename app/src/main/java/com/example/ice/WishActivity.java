@@ -60,6 +60,19 @@ public class WishActivity extends AppCompatActivity {
             }
         });
 
+        //button home
+        final Button button_home= findViewById(R.id.button_home);
+        button_home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                button_home.setBackgroundColor(Color.rgb(204, 233, 232));
+                Intent LogoutActivityIntent = new Intent(WishActivity.this, MainChildActivity.class);
+                startActivity(LogoutActivityIntent);
+            }
+        });
+
+
+
         //button coin
         final boolean[] coinClicked = {false};
         final Button button_wish_done= findViewById(R.id.button_wish_done);

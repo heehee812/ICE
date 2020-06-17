@@ -41,4 +41,5 @@
     <string name="wait">Wait</string>
     <string name="cancel">cancel</string>
     <string name="done">Done</string>
+    <string name="rule_eat">DO NOT play cellphone when EAT !</string>
 </resources>
