@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:shape="oval">
+    <size
+        android:width="400dp"
+        android:height="400dp" />
+    <gradient
+        android:centerColor="#D3C3FF"
+        android:endColor="#D3C3FF"
+        android:startColor="#D3C3FF"
+        android:type="linear"/>
+    <stroke
+        android:color="#69769B"
+        android:width="3dp"
+        />
 
-</selector>
+</shape>

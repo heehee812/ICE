@@ -7,10 +7,12 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -19,7 +21,7 @@ import androidx.annotation.RequiresApi;
 import com.example.ice.MainChildActivity;
 import com.example.ice.R;
 
-public class ChildView extends View {
+public class ChildView extends View{
     private float angle=0;
     private int GiveGift= 0;
     private Paint paint= new Paint();
@@ -72,7 +74,7 @@ public class ChildView extends View {
     @Override
     protected void onDraw(Canvas canvas){
 
-        int x=getWidth()/2, y=2*getHeight()/3;
+        int x=getWidth()/2, y=2*getHeight()/5;
         int imgXmonster=800, imgYmonster=1000;
         int imgXgift= 1500, imgYgift= 1800;
         int radius= 200;
@@ -86,13 +88,13 @@ public class ChildView extends View {
         @SuppressLint("DrawAllocation") Bitmap monster2= BitmapFactory.decodeResource(getResources(), R.drawable.monster2);
         monster2 = Bitmap.createScaledBitmap(monster2, imgXmonster, imgYmonster, true);
         if(GiveGift==0)
-            canvas.drawBitmap(monster2, x-imgXmonster/2 , y-2*imgYmonster/3, paint);
+            canvas.drawBitmap(monster2, x-imgXmonster/2 , y-imgYmonster/2, paint);
 
         //arc
         Log.d("angle", String.valueOf(angle));
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(Color.rgb(225, 225, 195));
-        RectF oval = new RectF( x-radius, y-radius, x+radius, y+radius);
+        RectF oval = new RectF( x-radius, y, x+radius, y+2*radius);
         if(GiveGift==0)
             canvas.drawArc(oval,270, angle, true, paint);
 
@@ -109,7 +111,7 @@ public class ChildView extends View {
         paint.setStrokeWidth(6);
         paint.setStyle(Paint.Style.STROKE);
         if(GiveGift==0)
-            canvas.drawCircle(x, y, radius, paint);
+            canvas.drawCircle(x, y+radius, radius, paint);
 
         //gift
         @SuppressLint("DrawAllocation") Bitmap gift= BitmapFactory.decodeResource(getResources(), R.drawable.gift);

@@ -72,6 +72,16 @@ public class WishActivity extends AppCompatActivity {
         });
 
 
+        //button my mission
+        final Button button_mission= findViewById(R.id.button_mission);
+        button_mission.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_mission.setBackgroundColor(Color.rgb(204, 233, 232));
+                Intent LogoutActivityIntent = new Intent(WishActivity.this, MissionActivity.class);
+                startActivity(LogoutActivityIntent);
+            }
+        });
 
         //button coin
         final boolean[] coinClicked = {false};

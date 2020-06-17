@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WishPaper"></activity>
         <activity
             android:name=".WishActivity"
             android:label="@string/title_activity_wish"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MissionActivity"
+            android:label="MissionActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainChildActivity"

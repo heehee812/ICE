@@ -14,6 +14,19 @@
         tools:context=".MainChildActivity"
         android:background="#E7DEFF">
 
+        <Button
+            android:id="@+id/button_circle_on_monster"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.590"
+            tools:ignore="MissingConstraints,OnClick" />
+
         <com.example.ice.Views.ChildView
             android:id="@+id/childview_idd"
             android:layout_width="410dp"
@@ -29,9 +42,8 @@
             android:id="@+id/button_fin"
             android:layout_width="151dp"
             android:layout_height="55dp"
-            android:background="#D1A0E2"
+            android:background="@android:color/transparent"
             android:gravity="center"
-            android:text="@string/mission_success"
             android:textColor="#E8EAE1"
             android:textSize="20sp"
             android:visibility="visible"
@@ -95,10 +107,13 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.912" />
 
+
         <include
             layout="@layout/app_bar_main_child"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="-75dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

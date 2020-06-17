@@ -6,9 +6,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ice.Views.ChildView;
@@ -22,6 +24,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import org.w3c.dom.Text;
 
 public class MainChildActivity extends AppCompatActivity {
 
@@ -65,7 +69,7 @@ public class MainChildActivity extends AppCompatActivity {
                 if(buttonFinishClicked[0])
                 {
                     Log.d("button in in", "click");
-                    buttonFinish.setBackgroundColor(Color.rgb(151, 68, 68));
+                    Toast.makeText(MainChildActivity.this, "mission success !", Toast.LENGTH_SHORT).show();
                     if(childview!=null) {
                         if(angle[0] <360) {
                             angle[0] += (360 / numberOfMission);
@@ -126,6 +130,18 @@ public class MainChildActivity extends AppCompatActivity {
             }
         });
 
+        //button my mission
+        final Button button_mission= findViewById(R.id.button_mission);
+        button_mission.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_mission.setBackgroundColor(Color.rgb(204, 233, 232));
+                Intent LogoutActivityIntent = new Intent(MainChildActivity.this, MissionActivity.class);
+                startActivity(LogoutActivityIntent);
+            }
+        });
+
+
         //button gift check
         buttonCheck.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -145,6 +161,25 @@ public class MainChildActivity extends AppCompatActivity {
                 buttonCheck.setVisibility(View.INVISIBLE);
                 buttonWait.setVisibility(View.INVISIBLE);
                 buttonFinish.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //button circle on monster
+        final Boolean[] circleClicked = {false};
+        final Button button_circle= findViewById(R.id.button_circle_on_monster);
+        final TextView text_rule= findViewById(R.id.text_rule_eat);
+        button_circle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(!circleClicked[0]) {
+                    Log.d("click circle", "click");
+                    text_rule.setVisibility(View.VISIBLE);
+                    circleClicked[0] = !circleClicked[0];
+                }
+                else{
+                    text_rule.setVisibility(View.INVISIBLE);
+                    circleClicked[0] = !circleClicked[0];
+                }
             }
         });
     }
