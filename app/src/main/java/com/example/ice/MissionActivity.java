@@ -77,6 +77,7 @@ public class MissionActivity extends AppCompatActivity {
 
         //button new mission
         final Button button_new_mission= findViewById(R.id.button_new_mission);
+        final Button button_new_mission2= findViewById(R.id.button_new_mission2);
         Log.d("click new", "click");
         if(button_new_mission!=null)
             Log.d("click new", "click");
@@ -88,12 +89,15 @@ public class MissionActivity extends AppCompatActivity {
                 if(button_new_mission!=null)
                     Log.d("click new", "click");
                 if(!newClicked[0]) {
-                    button_new_mission.setBackgroundColor(Color.rgb(211, 195, 255));
                     text_rule_walk.setVisibility(View.VISIBLE);
+                    button_new_mission.setVisibility(View.INVISIBLE);
+                    button_new_mission2.setVisibility(View.VISIBLE);
                     newClicked[0] = true;
                 }
                 else{
                     text_rule_walk.setVisibility(View.INVISIBLE);
+                    button_new_mission.setVisibility(View.INVISIBLE);
+                    button_new_mission2.setVisibility(View.VISIBLE);
                     newClicked[0] = false;
                 }
             }
