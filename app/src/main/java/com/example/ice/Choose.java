@@ -20,6 +20,7 @@ public class Choose extends AppCompatActivity {
         final Button button_child = findViewById(R.id.button_child);
         Log.d("button child", "yes");
 
+        //button child
         button_child.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +29,20 @@ public class Choose extends AppCompatActivity {
                 Toast.makeText(Choose.this,"finish", Toast.LENGTH_SHORT).show();
                 Intent ChooseIntent = new Intent(Choose.this, MainChildActivity.class);
                 startActivity(ChooseIntent);
+            }
+        });
+
+        //button parent
+        final Button button_parent= findViewById(R.id.button_parent);
+
+        button_parent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_parent.setBackgroundColor(Color.rgb(211, 208, 216));
+                Toast.makeText(Choose.this,"finish", Toast.LENGTH_SHORT).show();
+                Intent LogoutActivityIntent = new Intent(Choose.this, MainParentActivity.class);
+                Log.d("button parent", "true");
+                startActivity(LogoutActivityIntent);
             }
         });
     }
