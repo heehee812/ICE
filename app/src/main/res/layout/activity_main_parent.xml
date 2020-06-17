@@ -15,6 +15,30 @@
         android:background="#E7DEFF">
 
         <Button
+            android:id="@+id/button_circle_on_monster"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.590"
+            tools:ignore="MissingConstraints,OnClick" />
+
+        <com.example.ice.Views.ParentView
+            android:id="@+id/parentview_idd"
+            android:layout_width="410dp"
+            android:layout_height="571dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
             android:id="@+id/button_fin"
             android:layout_width="151dp"
             android:layout_height="55dp"
