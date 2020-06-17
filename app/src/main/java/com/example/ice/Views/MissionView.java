@@ -63,7 +63,7 @@ public class MissionView extends View {
         canvas.drawBitmap(background2,imgXisland-x/2, imgYisland-y/2, paint);
 
         int monsterWidth= 250, monsterHeight= 350;
-        int imgXmonster= imgXisland, imgYmonster= imgYisland-2*y/3;
+        int imgXmonster= imgXisland, imgYmonster= imgYisland-y/3;
 
         //monster2
         @SuppressLint("DrawAllocation") Bitmap bmonster2= BitmapFactory.decodeResource(getResources(), R.drawable.monster2);
@@ -71,9 +71,9 @@ public class MissionView extends View {
         canvas.drawBitmap(bmonster2,imgXmonster-x/2, imgYmonster-y/2, paint);
 
         int monster2Width= 200, monster2Height= 250;
-        canvas.drawBitmap(bmonster2,imgXmonster-x/2+monster2Width, imgYmonster-y, paint);
-        canvas.drawBitmap(bmonster2,imgXmonster-x/2+2*monster2Width+20, imgYmonster-y, paint);
-        canvas.drawBitmap(bmonster2,imgXmonster-x/2+3*monster2Width+20, imgYmonster-y, paint);
+        canvas.drawBitmap(bmonster2,imgXmonster-x/2+monster2Width, imgYmonster-y/4, paint);
+        canvas.drawBitmap(bmonster2,imgXmonster-x/2+2*monster2Width+20, imgYmonster-y/4, paint);
+        canvas.drawBitmap(bmonster2,imgXmonster-x/2+3*monster2Width+20, imgYmonster-y/4, paint);
 
     }
 

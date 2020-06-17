@@ -8,35 +8,35 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button_circle_on_monster"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:id="@+id/button_new_mission"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@drawable/circle_on_monster"
         android:text="@string/new_mission"
         android:textColor="#69769B"
-        android:textSize="30dp"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
+        app:layout_constraintVertical_bias="0.435"
         tools:ignore="MissingConstraints,OnClick" />
 
     <TextView
-        android:id="@+id/text_rule_eat"
+        android:id="@+id/text_rule_walk"
         android:layout_width="143dp"
         android:layout_height="96dp"
         android:background="#FFFFFF"
         android:gravity="center"
         android:text="@string/rule_walk"
-        android:textSize="20sp"
-        android:visibility="visible"
+        android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
+        app:layout_constraintVertical_bias="0.581" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

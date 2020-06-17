@@ -32,13 +32,13 @@
             android:background="@drawable/circle_on_monster"
             android:text="@string/new_mission"
             android:textColor="#69769B"
-            android:textSize="30dp"
+            android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintHorizontal_bias="0.237"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.308"
+            app:layout_constraintVertical_bias="0.445"
             tools:ignore="MissingConstraints,OnClick" />
 
         <TextView
@@ -48,14 +48,14 @@
             android:background="#FFFFFF"
             android:gravity="center"
             android:text="@string/rule_walk"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintHorizontal_bias="0.171"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.467" />
+            app:layout_constraintVertical_bias="0.581" />
 
         <include
             layout="@layout/app_bar_main_child"
