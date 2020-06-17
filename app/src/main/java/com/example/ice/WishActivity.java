@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.ice.Views.ChildView;
@@ -68,11 +69,13 @@ public class WishActivity extends AppCompatActivity {
         });
 
         //button coin
+        final EditText wish_papper= findViewById(R.id.edit_wish_papper);
         final Button button_coin = findViewById(R.id.button_coin);
         button_coin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                
+                wish_papper.setVisibility(View.VISIBLE);
+
             }
         });
 

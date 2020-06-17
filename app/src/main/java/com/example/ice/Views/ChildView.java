@@ -21,6 +21,7 @@ import com.example.ice.R;
 
 public class ChildView extends View {
     private float angle=0;
+    private int GiveGift= 0;
     private Paint paint= new Paint();
 
     public ChildView(Context context){
@@ -53,10 +54,17 @@ public class ChildView extends View {
 
     }
 
+    //angle
     public void angleIncrease(float angle)
     {
         Log.d("angleIncrease", "found");
         this.angle=angle;
+    }
+
+    //gift
+    public void giveGiftOrNot(int GiveGift)
+    {
+        this.GiveGift=GiveGift;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -66,6 +74,7 @@ public class ChildView extends View {
 
         int x=getWidth()/2, y=2*getHeight()/3;
         int imgXmonster=800, imgYmonster=1000;
+        int imgXgift= 1500, imgYgift= 1800;
         int radius= 200;
 
         //background
@@ -76,27 +85,38 @@ public class ChildView extends View {
         //monster
         @SuppressLint("DrawAllocation") Bitmap monster2= BitmapFactory.decodeResource(getResources(), R.drawable.monster2);
         monster2 = Bitmap.createScaledBitmap(monster2, imgXmonster, imgYmonster, true);
-        canvas.drawBitmap(monster2, x-imgXmonster/2 , y-2*imgYmonster/3, paint);
+        if(GiveGift==0)
+            canvas.drawBitmap(monster2, x-imgXmonster/2 , y-2*imgYmonster/3, paint);
 
         //arc
         Log.d("angle", String.valueOf(angle));
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(Color.rgb(225, 225, 195));
         RectF oval = new RectF( x-radius, y-radius, x+radius, y+radius);
-        canvas.drawArc(oval,270, angle, true, paint);
+        if(GiveGift==0)
+            canvas.drawArc(oval,270, angle, true, paint);
 
         //arc2
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(6);
         paint.setColor(Color.rgb(105, 118, 155));
-        canvas.drawArc(oval,270, angle, true, paint);
+        if(GiveGift==0)
+            canvas.drawArc(oval,270, angle, true, paint);
 
 
         //circle2
         paint.setColor(Color.rgb(105, 118, 155));
         paint.setStrokeWidth(6);
         paint.setStyle(Paint.Style.STROKE);
-        canvas.drawCircle(x, y, radius, paint);
+        if(GiveGift==0)
+            canvas.drawCircle(x, y, radius, paint);
+
+        //gift
+        @SuppressLint("DrawAllocation") Bitmap gift= BitmapFactory.decodeResource(getResources(), R.drawable.gift);
+        gift = Bitmap.createScaledBitmap(gift, imgXgift, imgYgift, true);
+        if(GiveGift==1)
+            canvas.drawBitmap(gift, x-imgXgift/2 , y-2*imgYgift/3, paint);
+
     }
 
 }

@@ -37,4 +37,6 @@
     <string name="mission">My mission</string>
     <string name="joe">Joe</string>
     <string name="title_activity_wish">WishActivity</string>
+    <string name="check">Check !</string>
+    <string name="wait">Wait</string>
 </resources>

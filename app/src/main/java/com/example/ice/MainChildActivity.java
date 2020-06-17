@@ -36,7 +36,7 @@ public class MainChildActivity extends AppCompatActivity {
         FloatingActionButton fab = findViewById(R.id.fab);
 
         final float[] angle = {0};
-        final float numberOfMission=10;
+        final float numberOfMission=30;
         final ChildView childview;
         childview= findViewById(R.id.childview_idd);
 
@@ -59,7 +59,10 @@ public class MainChildActivity extends AppCompatActivity {
 
         //button mission
         final Boolean[] buttonFinishClicked = {false};
+        final Button buttonCheck= findViewById(R.id.button_gift_check);
+        final Button buttonWait= findViewById(R.id.button_gift_wait);
         final Button buttonFinish= findViewById(R.id.button_fin);
+        final int[] GiveGift = {0};
         if(childview==null)
             Log.d("button null null", "click");
         buttonFinish.setOnClickListener(new View.OnClickListener() {
@@ -74,11 +77,21 @@ public class MainChildActivity extends AppCompatActivity {
                     if(childview!=null) {
                         if(angle[0] <360) {
                             angle[0] += (360 / numberOfMission);
+                            GiveGift[0] = 0;
+                            if(angle[0]==360) {
+                                GiveGift[0] = 1;
+                                buttonFinish.setVisibility(View.INVISIBLE);
+                                buttonCheck.setVisibility(View.VISIBLE);
+                                buttonWait.setVisibility(View.VISIBLE);
+                            }
+                            else
+                                GiveGift[0] =0;
                         }
                         else {
+                            GiveGift[0] =0;
                             angle[0] =360 / numberOfMission;
                         }
-
+                        childview.giveGiftOrNot(GiveGift[0]);
                         childview.angleIncrease(angle[0]);
                         Log.d("button in", "click");
                         childview.invalidate();
@@ -121,6 +134,27 @@ public class MainChildActivity extends AppCompatActivity {
             }
         });
 
+        //button gift check
+        buttonCheck.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast.makeText(MainChildActivity.this, "collected !", Toast.LENGTH_SHORT).show();
+                buttonCheck.setVisibility(View.INVISIBLE);
+                buttonWait.setVisibility(View.INVISIBLE);
+                buttonFinish.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //button gift wait
+        buttonWait.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast.makeText(MainChildActivity.this, "remind you later !", Toast.LENGTH_SHORT).show();
+                buttonCheck.setVisibility(View.INVISIBLE);
+                buttonWait.setVisibility(View.INVISIBLE);
+                buttonFinish.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
     @Override

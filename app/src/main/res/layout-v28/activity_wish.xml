@@ -39,14 +39,15 @@
             tools:ignore="MissingConstraints,OnClick" />
 
         <EditText
-            android:id="@+id/edit_wish_papper"
+            android:id="@+id/edit_text_account"
             android:layout_width="333dp"
             android:layout_height="419dp"
             android:width="3dp"
             android:background="#FFFFFF"
             android:inputType="textMultiLine"
             android:textColor="#A790A5"
-            android:visibility="invisible"
+            android:outlineAmbientShadowColor="@color/cardview_dark_background"
+            android:visibility="visible"
             android:gravity="left"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
