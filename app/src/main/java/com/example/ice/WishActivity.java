@@ -69,6 +69,7 @@ public class WishActivity extends AppCompatActivity {
         });
 
         //button coin
+        final boolean[] coinClicked = {false};
         final Button button_wish_done= findViewById(R.id.button_wish_done);
         final Button button_wish_cancel= findViewById(R.id.button_wish_cancel);
         final EditText wish_papper= findViewById(R.id.edit_wish_papper);
@@ -76,9 +77,20 @@ public class WishActivity extends AppCompatActivity {
         button_coin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wish_papper.setVisibility(View.VISIBLE);
-                button_wish_done.setVisibility(View.VISIBLE);
-                button_wish_cancel.setVisibility(View.VISIBLE);
+                Log.e("click coin", String.valueOf(coinClicked));
+                if(!coinClicked[0]) {
+                    wish_papper.setVisibility(View.VISIBLE);
+                    button_wish_done.setVisibility(View.VISIBLE);
+                    button_wish_cancel.setVisibility(View.VISIBLE);
+                    coinClicked[0]= true;
+                }
+                else
+                {
+                    wish_papper.setVisibility(View.INVISIBLE);
+                    button_wish_done.setVisibility(View.INVISIBLE);
+                    button_wish_cancel.setVisibility(View.INVISIBLE);
+                    coinClicked[0]= false;
+                }
             }
         });
 
