@@ -53,7 +53,7 @@ public class MissionView extends View {
         Paint paint;
         paint= new Paint();
 
-        int x=800, y=800;
+        int x=1000, y=1000;
         int imgXisland= getWidth()/2;
         int imgYisland= 2*getHeight()/3;
 
@@ -69,6 +69,11 @@ public class MissionView extends View {
         @SuppressLint("DrawAllocation") Bitmap bmonster2= BitmapFactory.decodeResource(getResources(), R.drawable.monster2);
         bmonster2 = Bitmap.createScaledBitmap(bmonster2, monsterWidth, monsterHeight, true);
         canvas.drawBitmap(bmonster2,imgXmonster-x/2, imgYmonster-y/2, paint);
+
+        int monster2Width= 200, monster2Height= 250;
+        canvas.drawBitmap(bmonster2,imgXmonster-x/2+monster2Width, imgYmonster-y, paint);
+        canvas.drawBitmap(bmonster2,imgXmonster-x/2+2*monster2Width+20, imgYmonster-y, paint);
+        canvas.drawBitmap(bmonster2,imgXmonster-x/2+3*monster2Width+20, imgYmonster-y, paint);
 
     }
 

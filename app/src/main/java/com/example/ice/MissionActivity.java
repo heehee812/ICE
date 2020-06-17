@@ -75,6 +75,27 @@ public class MissionActivity extends AppCompatActivity {
             }
         });
 
+        //button new mission
+        final Button button_new_mission= findViewById(R.id.button_new_mission);
+        final TextView text_rule_walk= findViewById(R.id.text_rule_walk);
+        final Boolean[] newClicked = {false};
+        button_home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d("click new", "click");
+                if(!newClicked[0]) {
+                    button_new_mission.setBackgroundColor(Color.rgb(211, 195, 255));
+                    text_rule_walk.setVisibility(View.VISIBLE);
+                    newClicked[0] = !newClicked[0];
+                }
+                else{
+                    text_rule_walk.setVisibility(View.INVISIBLE);
+                    newClicked[0] = !newClicked[0];
+                }
+            }
+        });
+
+
     }
 
     @Override

@@ -42,4 +42,6 @@
     <string name="cancel">cancel</string>
     <string name="done">Done</string>
     <string name="rule_eat">DO NOT play cellphone when EAT !</string>
+    <string name="new_mission">NEW</string>
+    <string name="rule_walk">Do NOT play cellphone when WALK !</string>
 </resources>

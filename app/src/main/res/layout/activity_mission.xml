@@ -25,6 +25,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
+        <Button
+            android:id="@+id/button_new_mission"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_on_monster"
+            android:text="@string/new_mission"
+            android:textColor="#69769B"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.308"
+            tools:ignore="MissingConstraints,OnClick" />
+
+        <TextView
+            android:id="@+id/text_rule_walk"
+            android:layout_width="143dp"
+            android:layout_height="96dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:text="@string/rule_walk"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.467" />
+
         <include
             layout="@layout/app_bar_main_child"
             android:layout_width="match_parent"

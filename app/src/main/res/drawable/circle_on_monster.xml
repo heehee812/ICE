@@ -6,13 +6,13 @@
         android:width="400dp"
         android:height="400dp" />
     <gradient
-        android:centerColor="#D3C3FF"
-        android:endColor="#D3C3FF"
-        android:startColor="#D3C3FF"
+        android:centerColor="#DA436C"
+        android:endColor="#DA436C"
+        android:startColor="#DA436C"
         android:type="linear"/>
     <stroke
         android:color="#69769B"
-        android:width="3dp"
+        android:width="0.5dp"
         />
 
 </shape>
