@@ -46,4 +46,8 @@
     <string name="rule_walk">Do NOT play cellphone when WALK !</string>
     <string name="title_activity_main_parent">MainParentActivity</string>
     <string name="hey_joe_s_mom">Hey Joe\'s mom!</string>
+    <string name="joe_s_wish">Joe\'s wish</string>
+    <string name="joe_s_gift">Joe\'s gift</string>
+    <string name="joe_s_mission">Joe\'s mission</string>
+    <string name="fail">Fail</string>
 </resources>
