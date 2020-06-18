@@ -85,7 +85,6 @@ public class ParentView extends View{
         //monster
         @SuppressLint("DrawAllocation") Bitmap monster2= BitmapFactory.decodeResource(getResources(), R.drawable.monster2);
         monster2 = Bitmap.createScaledBitmap(monster2, imgXmonster, imgYmonster, true);
-        if(GiveGift==0)
             canvas.drawBitmap(monster2, x-imgXmonster/2 , y-imgYmonster/2, paint);
 
         //arc
@@ -93,23 +92,20 @@ public class ParentView extends View{
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(Color.rgb(225, 225, 195));
         RectF oval = new RectF( x-radius, y, x+radius, y+2*radius);
-        if(GiveGift==0)
-            canvas.drawArc(oval,270, angle, true, paint);
+        canvas.drawArc(oval,270, angle, true, paint);
 
         //arc2
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(6);
         paint.setColor(Color.rgb(105, 118, 155));
-        if(GiveGift==0)
-            canvas.drawArc(oval,270, angle, true, paint);
+        canvas.drawArc(oval,270, angle, true, paint);
 
 
         //circle2
         paint.setColor(Color.rgb(105, 118, 155));
         paint.setStrokeWidth(6);
         paint.setStyle(Paint.Style.STROKE);
-        if(GiveGift==0)
-            canvas.drawCircle(x, y+radius, radius, paint);
+        canvas.drawCircle(x, y+radius, radius, paint);
 
     }
 }
