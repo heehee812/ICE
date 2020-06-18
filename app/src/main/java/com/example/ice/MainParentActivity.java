@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,9 +56,7 @@ public class MainParentActivity extends AppCompatActivity {
 
         //button mission
         final Boolean[] buttonFinishClicked = {false};
-        final Button buttonCheck= findViewById(R.id.button_gift_check);
-        final Button buttonWait= findViewById(R.id.button_gift_wait);
-        final Button buttonFinish= findViewById(R.id.button_fin);
+        final Button buttonFinish= findViewById(R.id.button_finish);
         final int[] GiveGift = {0};
         if(parentview==null)
             Log.d("button null null", "click");
@@ -77,8 +76,6 @@ public class MainParentActivity extends AppCompatActivity {
                             if(angle[0]==360) {
                                 GiveGift[0] = 1;
                                 buttonFinish.setVisibility(View.INVISIBLE);
-                                buttonCheck.setVisibility(View.VISIBLE);
-                                buttonWait.setVisibility(View.VISIBLE);
                             }
                             else
                                 GiveGift[0] =0;
@@ -160,6 +157,32 @@ public class MainParentActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //button new mission
+        final Boolean[] newClicked= {false};
+        final Button button_fail= findViewById(R.id.button_fail);
+        final EditText edit_set_mission= findViewById(R.id.edit_set_mission);
+        final Button button_add_mission= findViewById(R.id.button_add_mission);
+        button_add_mission.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(!newClicked[0]) {
+                    edit_set_mission.setVisibility(View.VISIBLE);
+                    button_fail.setVisibility(View.VISIBLE);
+                    buttonFinish.setVisibility(View.VISIBLE);
+                    newClicked[0] = !newClicked[0];
+                }
+                else{
+                    edit_set_mission.setVisibility(View.INVISIBLE);
+                    button_fail.setVisibility(View.INVISIBLE);
+                    buttonFinish.setVisibility(View.INVISIBLE);
+                    newClicked[0] = !newClicked[0];
+                }
+            }
+        });
+
+
+
     }
 
     @Override
