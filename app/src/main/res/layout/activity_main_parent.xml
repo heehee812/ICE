@@ -15,7 +15,7 @@
         android:background="#E7DEFF">
 
         <Button
-            android:id="@+id/button_circle_on_monster"
+            android:id="@+id/button_circle"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:background="@android:color/transparent"
@@ -24,7 +24,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.590"
+            app:layout_constraintVertical_bias="0.790"
             tools:ignore="MissingConstraints,OnClick" />
 
         <com.example.ice.Views.ParentView
@@ -54,12 +54,12 @@
             tools:ignore="MissingConstraints,OnClick" />
 
         <Button
-            android:id="@+id/button_finish"
+            android:id="@+id/button_ok"
             android:layout_width="45dp"
             android:layout_height="23dp"
             android:background="#A0DFE2"
             android:gravity="center"
-            android:text="@string/finish"
+            android:text="@string/ok"
             android:textColor="#E8EAE1"
             android:textSize="13sp"
             android:visibility="invisible"
@@ -72,12 +72,12 @@
             tools:ignore="MissingConstraints,OnClick" />
 
         <Button
-            android:id="@+id/button_fail"
+            android:id="@+id/button_cancel"
             android:layout_width="45dp"
             android:layout_height="23dp"
             android:background="#A0DFE2"
             android:gravity="center"
-            android:text="@string/fail"
+            android:text="@string/cancel"
             android:textColor="#E8EAE1"
             android:textSize="13sp"
             android:visibility="invisible"
@@ -87,6 +87,42 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.357"
+            tools:ignore="MissingConstraints,OnClick" />
+
+        <Button
+            android:id="@+id/button_finish"
+            android:layout_width="45dp"
+            android:layout_height="23dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/finish"
+            android:textColor="#E8EAE1"
+            android:textSize="13sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.923"
+            tools:ignore="MissingConstraints,OnClick" />
+
+        <Button
+            android:id="@+id/button_fail"
+            android:layout_width="45dp"
+            android:layout_height="23dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/fail"
+            android:textColor="#E8EAE1"
+            android:textSize="13sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.923"
             tools:ignore="MissingConstraints,OnClick" />
 
         <EditText
@@ -106,6 +142,40 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.192"
             tools:ignore="LabelFor,MissingConstraints,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/text_rule_eat"
+            android:layout_width="200dp"
+            android:layout_height="151dp"
+            android:background="#FFFFFF"
+            android:text="@string/rule_eat"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.554"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.912" />
+
+        <Button
+            android:id="@+id/button_done"
+            android:layout_width="45dp"
+            android:layout_height="23dp"
+            android:background="#A0DFE2"
+            android:gravity="center"
+            android:text="Done"
+            android:textColor="#E8EAE1"
+            android:textSize="13sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.356"
+            tools:ignore="MissingConstraints,OnClick" />
 
         <include
             layout="@layout/app_bar_main_parent"

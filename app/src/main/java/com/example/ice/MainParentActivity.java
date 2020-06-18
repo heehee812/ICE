@@ -54,53 +54,72 @@ public class MainParentActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
 
-        //button mission
+        //button circle on monster
         final Boolean[] buttonFinishClicked = {false};
+        final Boolean[] circleClicked = {false};
+        final Button button_circle= findViewById(R.id.button_circle);
+        final TextView text_rule= findViewById(R.id.text_rule_eat);
         final Button buttonFinish= findViewById(R.id.button_finish);
-        final int[] GiveGift = {0};
-        if(parentview==null)
-            Log.d("button null null", "click");
-        buttonFinish.setOnClickListener(new View.OnClickListener() {
+        final Button buttonFail= findViewById(R.id.button_fail);
+        button_circle.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v){
-                Log.d("button", "click");
-                buttonFinishClicked[0] =!buttonFinishClicked[0];
-                if(buttonFinishClicked[0])
-                {
-                    Log.d("button in in", "click");
-                    Toast.makeText(MainParentActivity.this, "mission success !", Toast.LENGTH_SHORT).show();
-                    if(parentview!=null) {
-                        if(angle[0] <360) {
-                            angle[0] += (360 / numberOfMission);
-                            GiveGift[0] = 0;
-                            if(angle[0]==360) {
-                                GiveGift[0] = 1;
+            public void onClick(View v) {
+                if(!circleClicked[0]) {
+                    Log.d("click circle", "click");
+                    text_rule.setVisibility(View.VISIBLE);
+                    buttonFinish.setVisibility(View.VISIBLE);
+                    buttonFail.setVisibility(View.VISIBLE);
+                    circleClicked[0] = !circleClicked[0];
+
+                    //button finish
+                    buttonFinish.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v){
+                            Log.d("button", "click");
+                            if(!buttonFinishClicked[0]) {
+                                Log.d("button in in", "click");
+                                Toast.makeText(MainParentActivity.this, "mission success !", Toast.LENGTH_SHORT).show();
+                                if(parentview!=null) {
+                                    if(angle[0] <360) {
+                                        angle[0] += (360 / numberOfMission);
+                                        if(angle[0]==360) {
+                                            text_rule.setBackgroundColor(Color.rgb(211, 208, 216));
+                                        }
+                                    }
+                                    else {
+                                        angle[0] =360 / numberOfMission;
+                                    }
+                                    parentview.angleIncrease(angle[0]);
+                                    Log.d("button in", "click");
+                                    parentview.invalidate();
+                                }
+                                else{
+                                    Log.d("button null", "click");
+                                }
+                                text_rule.setBackgroundColor(Color.rgb(211, 208, 216));
+                                text_rule.setVisibility(View.INVISIBLE);
                                 buttonFinish.setVisibility(View.INVISIBLE);
+                                buttonFail.setVisibility(View.INVISIBLE);
+
+                                buttonFinishClicked[0] =true;
                             }
                             else
-                                GiveGift[0] =0;
+                            {
+                                buttonFinishClicked[0] = false;
+                            }
                         }
-                        else {
-                            GiveGift[0] =0;
-                            angle[0] =360 / numberOfMission;
-                        }
-                        parentview.giveGiftOrNot(GiveGift[0]);
-                        parentview.angleIncrease(angle[0]);
-                        Log.d("button in", "click");
-                        parentview.invalidate();
-                    }
-                    else{
-                        Log.d("button null", "click");
-                    }
+
+                    });
+                    circleClicked[0]= !circleClicked[0];
 
                 }
-                else
-                {
-                    buttonFinish.setBackgroundColor(Color.rgb(181, 131, 141));
+                else{
+                    text_rule.setVisibility(View.INVISIBLE);
+                    buttonFinish.setVisibility(View.INVISIBLE);
+                    buttonFail.setVisibility(View.INVISIBLE);
+                    circleClicked[0]= !circleClicked[0];
                 }
-                buttonFinishClicked[0]=!buttonFinishClicked[0];
             }
-
         });
 
         //button logout
@@ -138,29 +157,10 @@ public class MainParentActivity extends AppCompatActivity {
             }
         });
 
-
-        //button circle on monster
-        final Boolean[] circleClicked = {false};
-        final Button button_circle= findViewById(R.id.button_circle_on_monster);
-        final TextView text_rule= findViewById(R.id.text_rule_eat);
-        button_circle.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                if(!circleClicked[0]) {
-                    Log.d("click circle", "click");
-                    text_rule.setVisibility(View.VISIBLE);
-                    circleClicked[0] = !circleClicked[0];
-                }
-                else{
-                    text_rule.setVisibility(View.INVISIBLE);
-                    circleClicked[0] = !circleClicked[0];
-                }
-            }
-        });
-
         //button new mission
         final Boolean[] newClicked= {false};
-        final Button button_fail= findViewById(R.id.button_fail);
+        final Button button_ok= findViewById(R.id.button_ok);
+        final Button button_cancel= findViewById(R.id.button_cancel);
         final EditText edit_set_mission= findViewById(R.id.edit_set_mission);
         final Button button_add_mission= findViewById(R.id.button_add_mission);
         button_add_mission.setOnClickListener(new View.OnClickListener(){
@@ -168,20 +168,26 @@ public class MainParentActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!newClicked[0]) {
                     edit_set_mission.setVisibility(View.VISIBLE);
-                    button_fail.setVisibility(View.VISIBLE);
-                    buttonFinish.setVisibility(View.VISIBLE);
+                    button_cancel.setVisibility(View.VISIBLE);
+                    button_ok.setVisibility(View.VISIBLE);
+
+                    button_ok.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v){
+                            Toast.makeText(MainParentActivity.this, "set finish !", Toast.LENGTH_SHORT).show();
+                        }
+
+                    });
                     newClicked[0] = !newClicked[0];
                 }
                 else{
                     edit_set_mission.setVisibility(View.INVISIBLE);
-                    button_fail.setVisibility(View.INVISIBLE);
-                    buttonFinish.setVisibility(View.INVISIBLE);
+                    button_cancel.setVisibility(View.INVISIBLE);
+                    button_ok.setVisibility(View.INVISIBLE);
                     newClicked[0] = !newClicked[0];
                 }
             }
         });
-
-
 
     }
 
